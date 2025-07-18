@@ -1,0 +1,7 @@
+RewriteEngine On
+
+# İzin verilen IP'ler
+#RewriteCond %{REMOTE_ADDR} !=2a04:92c7:2:347::4a5e		#ip6
+RewriteCond %{REMOTE_ADDR} !=85.107.92.12				#ip4
+
+RewriteRule ^(.*)$ https://bakim.cilaxankara.com.tr/$1 [R=302,L]
